@@ -12,9 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build project with Maven
+        uses: actions/setup-java@v4
+          with:
+            java-version: '8'
         run: mvn clean install
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
+        env:
+          JAVA_HOME: /opt/jdk
         id: Depcheck
         with:
           project: 'test'
