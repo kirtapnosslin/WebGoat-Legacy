@@ -7,10 +7,10 @@ on:
 jobs:
   depchecktest:
     runs-on: ubuntu-latest
-    name: depecheck_test
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+      - name: javaver
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
