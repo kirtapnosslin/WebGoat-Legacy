@@ -1,7 +1,7 @@
 # Name of this GitHub Actions workflow.
 # Note that this is not the best way to run semgrep in CI but it has been used for
 # demonstration purposes only
-name: Run Semgrep SAST
+name: Run Semgrep 2 SAST
 
 on:
   # Scan on-demand through GitHub Actions interface:
