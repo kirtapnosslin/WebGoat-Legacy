@@ -11,11 +11,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build project with Maven
         uses: actions/setup-java@v4
-          with:
-            distribution: 'temurin'
-            java-version: '8'
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+      - name: Build project with Maven
         run: mvn clean install
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
